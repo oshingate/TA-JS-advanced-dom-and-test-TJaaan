@@ -1,35 +1,34 @@
 let sec = document.querySelector(".sec");
-let copyArr = [...quotes];
-let arr1 = copyArr.slice(0, 4);
-arr1.forEach((ele) => {
-  let div = document.createElement("div");
-  let h2 = document.createElement("h2");
-  h2.innerText = ele.quoteAuthor;
-  let h3 = document.createElement("h3");
-  h3.innerText = ele.quoteText;
-  div.append(h2, h3);
-
-  sec.append(div);
-});
-let count = 3;
+let max = 5;
+let index = 0;
+function addQuotes() {
+  for (let i = 0; i < max; i++) {
+    let div = document.createElement("div");
+    let blockquote = document.createElement("blockquote");
+    let cite = document.createElement("cite");
+    blockquote.innerText = quotes[index].quoteText;
+    cite.innerText = quotes[index].quoteAuthor;
+    div.append(blockquote, cite);
+    sec.append(div);
+    index++;
+  }
+}
 
 window.addEventListener("scroll", () => {
-  //   let arr = copyArr.slice(count, 4);
-  //   arr.forEach((ele) => {
-  //     let div = document.createElement("div");
-  //     let h2 = document.createElement("h2");
-  //     h2.innerText = ele.quoteAuthor;
-  //     let h3 = document.createElement("h3");
-  //     h3.innerText = ele.quoteText;
-  //     div.append(h2, h3);
-  //     sec.append(div);
-  //   });
-  //   count += 4;
+  let scrollHeight = document.documentElement.scrollHeight;
+
+  let scrollTop = document.documentElement.scrollTop;
+
+  let clientHeight = document.documentElement.clientHeight;
+  if (scrollTop + clientHeight >= scrollHeight) {
+    addQuotes();
+  }
 });
 
 // on loaded event
 function ready() {
   alert("DOM is ready");
+  addQuotes();
 }
 
 document.addEventListener("DOMContentLoaded", ready);
