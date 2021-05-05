@@ -1,0 +1,62 @@
+.main-sec {
+  margin: 2rem;
+}
+input,
+select {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.root {
+  min-height: 60vh;
+  background-color: aquamarine;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-div {
+  max-width: 400px;
+  margin: 0 auto;
+}
+form {
+  margin: 2rem;
+}
+form > * {
+  margin-bottom: 1rem;
+}
+form button {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 7px;
+  background-color: blueviolet;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-50 {
+  flex: 0 1 28%;
+  margin: 1%;
+  border: 1px solid white;
+  height: 10rem;
+  background-color: teal;
+  padding: 0.5rem;
+}
+.flex-50 input::placeholder {
+  font-size: 2rem;
+}
+.flex-50 > * {
+  margin-bottom: 2rem;
+}
+.inputclass {
+  background-color: transparent;
+  border: none;
+}
+.inputclass::placeholder {
+  color: white;
+}
+.selectclass {
+  background-color: transparent;
+  border: none;
+}
