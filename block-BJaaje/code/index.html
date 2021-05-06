@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assessment: Drag and Drop Game</title>
+    <script
+      src="https://kit.fontawesome.com/7c7efbb78c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="stickers-div flex">
+            <div class="sticker">
+              <i
+                class="far fa-smile-wink drag"
+                data-no="1"
+                draggable="true"
+              ></i>
+            </div>
+            <div class="sticker">
+              <i
+                class="far fa-smile-beam drag"
+                data-no="2"
+                draggable="true"
+              ></i>
+            </div>
+            <div class="sticker">
+              <i class="far fa-smile drag" data-no="3" draggable="true"></i>
+            </div>
+            <div class="sticker">
+              <i
+                class="far fa-grin-beam-sweat drag"
+                data-no="4"
+                draggable="true"
+              ></i>
+            </div>
+            <div class="sticker">
+              <i class="far fa-kiss-beam drag" data-no="5" draggable="true"></i>
+            </div>
+          </div>
+          <div class="game-div">
+            <div class="game">
+              <div class="empty" data-no="4"></div>
+              <span>sweat</span>
+            </div>
+            <div class="game">
+              <div class="empty" data-no="5"></div>
+              <span>Kiss</span>
+            </div>
+            <div class="game">
+              <div class="empty" data-no="3"></div>
+              <span>smile</span>
+            </div>
+            <div class="game">
+              <div class="empty" data-no="1"></div>
+              <span>Wink</span>
+            </div>
+            <div class="game">
+              <div class="empty" data-no="2"></div>
+              <span>smile-beam</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
