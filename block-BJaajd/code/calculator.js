@@ -1,15 +1,43 @@
-function add() {}
+function add(num1, num2) {
+  return num1 + num2;
+}
 
-function subtract() {}
+function subtract(num1, num2) {
+  return num1 - num2;
+}
 
-function sum() {}
+function sum(num1, num2) {
+  return num1 + num2;
+}
 
-function multiply() {}
+function multiply(num1, num2) {
+  return num1 * num2;
+}
 
-function power() {}
+function power(num1, num2) {
+  let ans = num1;
+  for (let i = 1; i < num2; i++) {
+    ans *= ans;
+  }
+  return ans;
+}
 
-function factorial() {}
+function factorial(num1) {
+  let fact = 1;
+  for (let i = 1; i <= num1; i++) {
+    fact = fact * i;
+  }
+  return fact;
+}
+class Cart {
+  constructor() {
+    this.items = [];
+  }
 
+  addToCart(item) {
+    this.items.push(item);
+  }
+}
 module.exports = {
   add,
   subtract,
@@ -17,4 +45,5 @@ module.exports = {
   multiply,
   power,
   factorial,
+  Cart,
 };
